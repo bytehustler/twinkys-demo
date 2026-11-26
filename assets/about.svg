@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+<!-- DEMO PLACEHOLDER ARTWORK. Replace by adding a real photo (jpg) with the same name in /assets -->
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9f0df"/><stop offset="1" stop-color="#e8d3a8"/></linearGradient>
+<radialGradient id="gl" cx="0.5" cy="0.35" r=".7"><stop offset="0" stop-color="#ffffff" stop-opacity=".75"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+<linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c4a265"/><stop offset="1" stop-color="#7a5f2b"/></linearGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#bg)"/><rect width="800" height="1000" fill="url(#gl)"/>
+<g fill="none" stroke="url(#gd)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(400 380) scale(1.1)"><ellipse rx="130" ry="170"/><ellipse rx="112" ry="152" stroke-opacity=".5"/><path d="M0 170 V300 M-60 300 H60"/><path d="M-60 -60 Q-20 -110 40 -100" stroke-opacity=".6"/></g><g transform="translate(190 780) scale(0.9)"><rect x="-55" y="-10" width="110" height="140" rx="22"/><rect x="-22" y="-90" width="44" height="80" rx="8"/><path d="M-55 40 H55" stroke-opacity=".5"/></g><g transform="translate(620 700) rotate(-15) scale(0.8)"><rect x="-10" y="0" width="20" height="200" rx="10"/><path d="M-22 0 C-30 -60 -10 -100 0 -120 C10 -100 30 -60 22 0Z"/></g><g transform="translate(520 850) rotate(0) scale(0.7)"><rect x="-32" y="0" width="64" height="130" rx="8"/><rect x="-26" y="-60" width="52" height="60" rx="6"/><path d="M-26 -60 L26 -90 V-60"/></g></g>
+</svg>

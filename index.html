@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twinky's – Hair | Beauty | Skin · Unisex Salon in Kolhapur</title>
+  <meta name="description" content="Twinky's is a unisex hair, beauty and skin care studio at City Point Complex, Chhatrapati Shivaji Maharaj Chowk, Kolhapur. Explore services and get directions.">
+  <meta name="theme-color" content="#fbf7ef">
+  <!-- DEMO ONLY: remove the next line when the site goes live for the salon -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:title" content="Twinky's – Hair | Beauty | Skin, Kolhapur">
+  <meta property="og:description" content="Your Beauty. Your Style. Your Confidence.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}#loader{display:none!important}</style></noscript>
+</head>
+<body>
+  <!-- =====================================================================
+       HOW TO REPLACE IMAGES (simple steps)
+       1. Put the salon's own photo inside the "assets" folder.
+       2. Give it EXACTLY one of these names (.jpg):
+            hero.jpg       -> top banner            (landscape, about 1920x1080)
+            about.jpg      -> About section         (portrait 4:5, about 800x1000)
+            gallery-1.jpg  -> Hair Styling  (tall)  (portrait, about 800x1200)
+            gallery-2.jpg  -> Hair Colour           (square, about 800x800)
+            gallery-3.jpg  -> Skin Care             (square, about 800x800)
+            gallery-4.jpg  -> The Studio    (wide)  (landscape 2:1, about 1600x800)
+            gallery-5.jpg  -> Nail Art              (square, about 800x800)
+            gallery-6.jpg  -> Occasion Makeup       (square, about 800x800)
+       3. That's it. The page uses the .jpg automatically; the .svg files in
+          assets are only demo placeholders (fallback) and can be deleted later.
+       Tip: keep each photo under ~300 KB so the site stays fast.
+       Using .png or .webp? Change the file extension in that image's src="..."
+       Also update the alt="..." text so it describes the new photo.
+       ===================================================================== -->
+
+  <!-- Intro screen (disappears by itself). Delete this block + "LOADER" in script.js if not wanted -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-name">Twinky's</span>
+      <span class="loader-tag">Hair <i>|</i> Beauty <i>|</i> Skin</span>
+      <span class="loader-line"></span>
+    </div>
+  </div>
+
+  <div id="progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Icon set used by service + why cards (edit or swap freely) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-scissors" viewBox="0 0 48 48"><circle cx="13" cy="36" r="6"/><circle cx="35" cy="36" r="6"/><path d="M17 31 L33 6 M31 31 L15 6"/></symbol>
+      <symbol id="i-colour" viewBox="0 0 48 48"><path d="M24 5 C33 16 38 22 38 29 a14 14 0 0 1 -28 0 C10 22 15 16 24 5Z"/><path d="M17 30 a7 7 0 0 0 7 7" /></symbol>
+      <symbol id="i-smooth" viewBox="0 0 48 48"><path d="M6 14 C14 8 20 20 28 14 S40 10 44 14"/><path d="M6 24 C14 18 20 30 28 24 S40 20 44 24"/><path d="M6 34 C14 28 20 40 28 34 S40 30 44 34"/></symbol>
+      <symbol id="i-care" viewBox="0 0 48 48"><path d="M24 6 l3.5 9.5 L37 19 l-9.5 3.5 L24 32 l-3.5 -9.5 L11 19 l9.5 -3.5Z"/><path d="M37 32 l1.6 4.4 L43 38 l-4.4 1.6 L37 44 l-1.6 -4.4 L31 38 l4.4 -1.6Z"/></symbol>
+      <symbol id="i-lotus" viewBox="0 0 48 48"><path d="M24 40 C15 32 15 18 24 8 C33 18 33 32 24 40Z"/><path d="M24 40 C12 38 6 28 7 20 C14 22 20 30 24 40Z"/><path d="M24 40 C36 38 42 28 41 20 C34 22 28 30 24 40Z"/></symbol>
+      <symbol id="i-thread" viewBox="0 0 48 48"><path d="M8 38 C14 14 34 34 40 10"/><circle cx="8" cy="38" r="3"/><circle cx="40" cy="10" r="3"/><path d="M14 12 C20 22 28 24 34 40" opacity=".6"/></symbol>
+      <symbol id="i-hand" viewBox="0 0 48 48"><path d="M14 44 V24 a3 3 0 0 1 6 0 V10 a3 3 0 0 1 6 0 V22 V12 a3 3 0 0 1 6 0 V24 V18 a3 3 0 0 1 6 0 V32 C38 40 34 44 28 44Z"/></symbol>
+      <symbol id="i-crown" viewBox="0 0 48 48"><path d="M6 36 L9 14 L18 24 L24 10 L30 24 L39 14 L42 36Z"/><path d="M6 41 H42"/></symbol>
+      <symbol id="i-polish" viewBox="0 0 48 48"><rect x="12" y="20" width="24" height="24" rx="6"/><rect x="19" y="8" width="10" height="12" rx="2"/><path d="M12 31 H36" opacity=".6"/></symbol>
+      <symbol id="i-star" viewBox="0 0 48 48"><path d="M24 5 l5.6 12 13 1.6 -9.6 9 2.6 12.9 L24 33.6 12.4 40.5 15 27.6 5.4 18.6 18.4 17Z"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 48 48"><path d="M24 6 L42 16 24 26 6 16Z"/><path d="M6 24 L24 34 42 24"/><path d="M6 32 L24 42 42 32"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 41 C8 29 6 19 12 13 c5 -4 10 -1 12 4 c2 -5 7 -8 12 -4 c6 6 4 16 -12 28Z"/></symbol>
+      <symbol id="i-sofa" viewBox="0 0 48 48"><path d="M10 22 V16 a4 4 0 0 1 4 -4 H34 a4 4 0 0 1 4 4 V22"/><rect x="5" y="22" width="38" height="12" rx="5"/><path d="M10 34 V40 M38 34 V40"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4 h4 l2 5 -2.5 1.5 a11 11 0 0 0 5 5 L15 13 l5 2 v4 a2 2 0 0 1 -2 2 A15 15 0 0 1 3 6 a2 2 0 0 1 2 -2Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22 C6 15 4 11 4 8.5 a8 8 0 0 1 16 0 C20 11 18 15 12 22Z"/><circle cx="12" cy="8.5" r="3"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8 V5 a1 1 0 0 0 -1 -1 H5 a1 1 0 0 0 -1 1 v10 a1 1 0 0 0 1 1 h3"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Twinky's – Hair, Beauty, Skin – back to top">
+        <span class="brand-name">Twinky's</span>
+        <span class="brand-tag">Hair <i>|</i> Beauty <i>|</i> Skin</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+919370112252" class="btn btn-gold btn-sm nav-call">Call Now</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-media" id="heroMedia">
+        <!-- IMAGE: HERO background -> save your photo as assets/hero.jpg (landscape ~1920x1080). Dark/warm photos look best because text sits on top -->
+        <img class="hero-bg" src="assets/hero.jpg" data-fallback="assets/hero.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Elegant salon interior with warm golden lighting (demo placeholder image)">
+      </div>
+      <div class="hero-overlay"></div>
+      <canvas id="sparkles" aria-hidden="true"></canvas>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow line-in" style="--d:.2s">Twinky's · Hair | Beauty | Skin</p>
+          <h1 id="hero-title">
+            <span class="h-line"><span style="--d:.35s">Your Beauty.</span></span>
+            <span class="h-line"><span style="--d:.5s">Your Style.</span></span>
+            <span class="h-line"><span style="--d:.65s"><em>Your Confidence.</em></span></span>
+          </h1>
+          <p class="hero-lead line-in" style="--d:.85s">A unisex hair, beauty and skin care studio in the heart of Kolhapur. Come in, relax, and let us look after the details.</p>
+          <div class="hero-actions line-in" style="--d:1s">
+            <a href="#services" class="btn btn-gold magnetic">Explore Services</a>
+            <a href="tel:+919370112252" class="btn btn-ghost magnetic">
+              <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Call Now
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card line-in" style="--d:1.15s" aria-label="Visit the studio">
+          <p class="hc-label">Visit the studio</p>
+          <p class="hc-title">City Point Complex</p>
+          <p class="hc-text">Chhatrapati Shivaji Maharaj Chowk,<br>C Ward, Kolhapur 416002</p>
+          <a class="hc-phone" href="tel:+919370112252">+91 93701 12252</a>
+          <a class="hc-link" href="https://www.google.com/maps/search/?api=1&amp;query=Twinkys+Hair+Beauty+Skin+City+Point+Complex+Kolhapur" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section"><span></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <!-- EDIT: the words that scroll across. Keep both lists identical so the loop is seamless. -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Haircuts &amp; Styling</span><b>✦</b><span>Hair Colour</span><b>✦</b><span>Smoothening</span><b>✦</b><span>Hair Treatments</span><b>✦</b><span>Skin Care &amp; Facials</span><b>✦</b><span>Threading &amp; Waxing</span><b>✦</b><span>Manicure &amp; Pedicure</span><b>✦</b><span>Bridal Makeup</span><b>✦</b><span>Nail Art</span><b>✦</b>
+        <span>Haircuts &amp; Styling</span><b>✦</b><span>Hair Colour</span><b>✦</b><span>Smoothening</span><b>✦</b><span>Hair Treatments</span><b>✦</b><span>Skin Care &amp; Facials</span><b>✦</b><span>Threading &amp; Waxing</span><b>✦</b><span>Manicure &amp; Pedicure</span><b>✦</b><span>Bridal Makeup</span><b>✦</b><span>Nail Art</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-text">
+          <p class="eyebrow reveal">About Twinky's</p>
+          <h2 id="about-title" class="reveal">A destination for hair, beauty <em>&amp; skin</em></h2>
+          <div class="gold-rule reveal"></div>
+          <!-- EDIT: replace with the owner's own words after discussion -->
+          <p class="reveal">Twinky's is a unisex salon and beauty studio located at City Point Complex in Kolhapur, bringing hair, beauty and skin care together under one roof.</p>
+          <p class="reveal">Whether you are visiting for a fresh look, a little self-care or preparation for a special occasion, the aim is simple: a welcoming space and attentive service from the moment you walk in.</p>
+          <div class="about-pills reveal">
+            <span>Hair</span><span>Beauty</span><span>Skin</span><span>Unisex</span>
+          </div>
+          <a href="#contact" class="text-link reveal">Visit or call us <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="about-visual reveal">
+          <!-- IMAGE: About photo -> save your photo as assets/about.jpg (portrait 4:5, ~800x1000) -->
+          <img src="assets/about.jpg" data-fallback="assets/about.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Styling tools and beauty products arranged on a salon counter (demo placeholder image)" loading="lazy">
+          <div class="about-frame" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">What We Offer</p>
+          <h2 id="services-title" class="reveal">Our Services</h2>
+          <div class="gold-rule center-rule reveal"></div>
+          <p class="section-sub reveal">Suggested service categories. Please call to confirm availability.</p>
+        </header>
+
+        <!-- Filter buttons. data-filter must match the data-cat of the cards below. -->
+        <div class="filters reveal" role="group" aria-label="Filter services">
+          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="hair" aria-pressed="false">Hair</button>
+          <button type="button" class="chip" data-filter="skin" aria-pressed="false">Skin &amp; Grooming</button>
+          <button type="button" class="chip" data-filter="nails" aria-pressed="false">Hands &amp; Nails</button>
+          <button type="button" class="chip" data-filter="bridal" aria-pressed="false">Bridal</button>
+        </div>
+
+        <!-- EDIT: each <article class="service-card"> is one service.
+             Change the title/text, copy a card to add one, delete a card to remove one.
+             data-cat = hair | skin | nails | bridal  (decides which filter shows it).
+             Icon: change the #i-... name (see the icon list at the top of this file). -->
+        <div class="service-grid" id="serviceGrid">
+          <article class="service-card reveal" data-cat="hair"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-scissors"/></svg>
+            <span class="service-num">01</span>
+            <h3>Haircuts &amp; Hair Styling</h3>
+            <p>Cuts and styling for men and women, shaped around your look and your routine.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="hair"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-colour"/></svg>
+            <span class="service-num">02</span>
+            <h3>Hair Colour</h3>
+            <p>Colour services to refresh your look, from subtle changes to something bolder.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="hair"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-smooth"/></svg>
+            <span class="service-num">03</span>
+            <h3>Hair Smoothening</h3>
+            <p>Smoothening services for a sleek, manageable finish.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="hair"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-care"/></svg>
+            <span class="service-num">04</span>
+            <h3>Hair Treatments</h3>
+            <p>Care treatments to help your hair feel healthy, soft and refreshed.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="skin"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-lotus"/></svg>
+            <span class="service-num">05</span>
+            <h3>Skin Care &amp; Facials</h3>
+            <p>Facials and skin care to leave your skin feeling fresh and cared for.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="skin"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-thread"/></svg>
+            <span class="service-num">06</span>
+            <h3>Threading &amp; Waxing</h3>
+            <p>Everyday grooming essentials, done with care and attention.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="nails"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-hand"/></svg>
+            <span class="service-num">07</span>
+            <h3>Manicure &amp; Pedicure</h3>
+            <p>Hand and foot care for a neat, polished finish.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="bridal"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-crown"/></svg>
+            <span class="service-num">08</span>
+            <h3>Bridal &amp; Occasion Makeup</h3>
+            <p>Makeup for weddings, celebrations and special days.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+          <article class="service-card reveal" data-cat="nails"><div class="sc-inner">
+            <svg class="sc-icon" aria-hidden="true"><use href="#i-polish"/></svg>
+            <span class="service-num">09</span>
+            <h3>Nail Art</h3>
+            <p>Creative nail designs to match your style and mood.</p>
+            <a class="sc-link" href="tel:+919370112252">Call to enquire <span aria-hidden="true">→</span></a>
+          </div></article>
+        </div>
+
+        <!-- ============ SERVICE FINDER (interactive) ============
+             EDIT: each button's data-pick lists the services shown for that choice (names separated by |). -->
+        <div class="finder reveal">
+          <p class="finder-q">Not sure where to start? <em>What are you visiting for?</em></p>
+          <div class="finder-opts" role="group" aria-label="What are you visiting for?">
+            <button type="button" class="chip" data-pick="Haircuts &amp; Hair Styling|Hair Colour">A fresh new look</button>
+            <button type="button" class="chip" data-pick="Hair Smoothening|Hair Treatments">Smooth, healthy hair</button>
+            <button type="button" class="chip" data-pick="Skin Care &amp; Facials|Threading &amp; Waxing">Fresh, glowing skin</button>
+            <button type="button" class="chip" data-pick="Manicure &amp; Pedicure|Nail Art">Hands &amp; feet</button>
+            <button type="button" class="chip" data-pick="Bridal &amp; Occasion Makeup|Haircuts &amp; Hair Styling">A special occasion</button>
+          </div>
+          <div class="finder-result" id="finderResult" aria-live="polite" hidden>
+            <p class="fr-text">You may like to ask about: <strong id="frList"></strong></p>
+            <div class="fr-actions">
+              <a href="tel:+919370112252" class="btn btn-gold btn-sm">Call to confirm</a>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Twinkys+Hair+Beauty+Skin+City+Point+Complex+Kolhapur" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">Get directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">Gallery</p>
+          <h2 id="gallery-title" class="reveal">A Glimpse of the <em>Style</em></h2>
+          <div class="gold-rule center-rule reveal"></div>
+          <!-- EDIT: demo images. Replace with the salon's own photos (with permission). -->
+          <p class="section-sub reveal">Demo placeholder images. These will be replaced with the salon's own photographs. Tap any picture to view it larger.</p>
+        </header>
+
+        <div class="gallery-grid">
+          <!-- IMAGE: Gallery 1 - Hair Styling (tall, portrait ~800x1200) -> save your photo as assets/gallery-1.jpg and update alt text and the caption -->
+          <button class="g-item g-tall reveal" type="button" data-lightbox>
+            <img src="assets/gallery-1.jpg" data-fallback="assets/gallery-1.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Hair styling showcase (demo placeholder image)" loading="lazy">
+            <span class="g-cap">Hair Styling</span>
+            <span class="g-zoom" aria-hidden="true">+</span>
+          </button>
+          <!-- IMAGE: Gallery 2 - Hair Colour (square ~800x800) -> save your photo as assets/gallery-2.jpg and update alt text and the caption -->
+          <button class="g-item reveal" type="button" data-lightbox>
+            <img src="assets/gallery-2.jpg" data-fallback="assets/gallery-2.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Hair colour showcase (demo placeholder image)" loading="lazy">
+            <span class="g-cap">Hair Colour</span>
+            <span class="g-zoom" aria-hidden="true">+</span>
+          </button>
+          <!-- IMAGE: Gallery 3 - Skin Care (square ~800x800) -> save your photo as assets/gallery-3.jpg and update alt text and the caption -->
+          <button class="g-item reveal" type="button" data-lightbox>
+            <img src="assets/gallery-3.jpg" data-fallback="assets/gallery-3.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Skin care and facial showcase (demo placeholder image)" loading="lazy">
+            <span class="g-cap">Skin Care</span>
+            <span class="g-zoom" aria-hidden="true">+</span>
+          </button>
+          <!-- IMAGE: Gallery 4 - The Studio (wide 2:1 ~1600x800) -> save your photo as assets/gallery-4.jpg and update alt text and the caption -->
+          <button class="g-item g-wide reveal" type="button" data-lightbox>
+            <img src="assets/gallery-4.jpg" data-fallback="assets/gallery-4.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Salon interior showcase (demo placeholder image)" loading="lazy">
+            <span class="g-cap">The Studio</span>
+            <span class="g-zoom" aria-hidden="true">+</span>
+          </button>
+          <!-- IMAGE: Gallery 5 - Nail Art (square ~800x800) -> save your photo as assets/gallery-5.jpg and update alt text and the caption -->
+          <button class="g-item reveal" type="button" data-lightbox>
+            <img src="assets/gallery-5.jpg" data-fallback="assets/gallery-5.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Nail art showcase (demo placeholder image)" loading="lazy">
+            <span class="g-cap">Nail Art</span>
+            <span class="g-zoom" aria-hidden="true">+</span>
+          </button>
+          <!-- IMAGE: Gallery 6 - Occasion Makeup (square ~800x800) -> save your photo as assets/gallery-6.jpg and update alt text and the caption -->
+          <button class="g-item reveal" type="button" data-lightbox>
+            <img src="assets/gallery-6.jpg" data-fallback="assets/gallery-6.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Bridal makeup showcase (demo placeholder image)" loading="lazy">
+            <span class="g-cap">Occasion Makeup</span>
+            <span class="g-zoom" aria-hidden="true">+</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">Why Twinky's</p>
+          <h2 id="why-title" class="reveal">Why Choose Us</h2>
+          <div class="gold-rule center-rule reveal"></div>
+        </header>
+
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <span class="why-ico"><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <h3>Professional Beauty Experience</h3>
+            <p>A polished, thoughtful approach to every visit.</p>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-ico"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Multiple Beauty Services</h3>
+            <p>Hair, beauty and skin care together in one place.</p>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3>Personal Attention</h3>
+            <p>Your preferences come first, whatever you are visiting for.</p>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-ico"><svg aria-hidden="true"><use href="#i-sofa"/></svg></span>
+            <h3>Comfortable Salon Experience</h3>
+            <p>A welcoming space where you can relax and feel at ease.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-main">
+          <p class="eyebrow reveal">Contact</p>
+          <h2 id="contact-title" class="reveal">Visit <em>Twinky's</em></h2>
+          <div class="gold-rule reveal"></div>
+          <p class="contact-lead reveal">Call us to ask about services and availability, or get directions to the studio.</p>
+
+          <div class="contact-card reveal">
+            <div class="contact-row">
+              <span class="contact-label">Phone</span>
+              <div class="cr-line">
+                <a class="contact-value" href="tel:+919370112252">+91 93701 12252</a>
+                <button type="button" class="copy-btn" data-copy="+91 93701 12252" data-label="Phone number" aria-label="Copy phone number"><svg aria-hidden="true"><use href="#i-copy"/></svg></button>
+              </div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">Address</span>
+              <div class="cr-line">
+                <address class="contact-value">
+                  Twinky's – Hair | Beauty | Skin<br>
+                  City Point Complex, Chhatrapati Shivaji Maharaj Chowk,<br>
+                  C Ward, Kolhapur, Maharashtra 416002
+                </address>
+                <button type="button" class="copy-btn" data-copy="Twinky's – Hair | Beauty | Skin, City Point Complex, Chhatrapati Shivaji Maharaj Chowk, C Ward, Kolhapur, Maharashtra 416002" data-label="Address" aria-label="Copy address"><svg aria-hidden="true"><use href="#i-copy"/></svg></button>
+              </div>
+            </div>
+            <div class="contact-actions">
+              <a href="tel:+919370112252" class="btn btn-gold magnetic"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Call Now</a>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Twinkys+Hair+Beauty+Skin+City+Point+Complex+Kolhapur" class="btn btn-outline-dark magnetic" target="_blank" rel="noopener noreferrer"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap reveal">
+          <!-- Live map (no API key needed). If it ever fails to load, the Get Directions button still works. -->
+          <iframe title="Map showing Twinky's at City Point Complex, Kolhapur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Twinkys+Hair+Beauty+Skin+City+Point+Complex+Kolhapur&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Twinky's</span>
+        <span class="brand-tag">Hair <i>|</i> Beauty <i>|</i> Skin</span>
+      </div>
+      <p class="footer-contact">
+        City Point Complex, Chhatrapati Shivaji Maharaj Chowk,<br>
+        C Ward, Kolhapur, Maharashtra 416002<br>
+        <a href="tel:+919370112252">+91 93701 12252</a>
+      </p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-note">
+      <p>Independent website concept demo. Not an official business website.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile quick-action bar -->
+  <div class="mobile-bar" aria-label="Quick actions">
+    <a href="tel:+919370112252" class="mb-call">Call Now</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Twinkys+Hair+Beauty+Skin+City+Point+Complex+Kolhapur" target="_blank" rel="noopener noreferrer" class="mb-dir">Directions</a>
+  </div>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Theme switcher: DEMO ONLY. Lets the salon owner preview colour themes. Delete this whole block (and the "THEME SWITCHER" part of script.js) for the final site. -->
+  <div class="theme-switch" id="themeSwitch">
+    <div class="theme-menu" id="themeMenu" role="group" aria-label="Choose colour theme">
+      <button type="button" data-theme="champagne"><span class="dot" style="background:#c4a265"></span>Champagne Ivory</button>
+      <button type="button" data-theme="rose"><span class="dot" style="background:#cf8f84"></span>Rosé Blush</button>
+      <button type="button" data-theme="sage"><span class="dot" style="background:#b8c39f"></span>Sage Cream</button>
+    </div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Change colour theme" aria-expanded="false" aria-controls="themeMenu">◐</button>
+  </div>
+
+  <!-- Lightbox (gallery viewer with next / previous) -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image preview">
+    <button class="lb-close" type="button" id="lbClose" aria-label="Close preview">×</button>
+    <button class="lb-nav lb-prev" type="button" id="lbPrev" aria-label="Previous image">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-nav lb-next" type="button" id="lbNext" aria-label="Next image">›</button>
+    <p class="lb-meta"><span id="lbCap"></span> <span id="lbCount"></span></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
